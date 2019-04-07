@@ -4,8 +4,13 @@
   "description": "Twitter bot that retweets democratic primary candidates",
   "main": "bot.js",
   "scripts": {
+    "start": "node bot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bashir",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "twit": "^2.2.11"
+  }
 }
