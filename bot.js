@@ -17,13 +17,15 @@ var retweet = function () {
             Twitter.post('statuses/retweet/:id', {
                 id: retweetId
             },
+            
             function (err, response){
                 if (response){
                     console.log('Retweeted!')
                 }
 
                 if (err){
-                    console.log('Something went wrong while trying to RETWEET...'+ err)
+                    console.log('Something went wrong while trying to RETWEET:'+ err)
+                    console.log(retweetId)
                 }
             });
         }
@@ -35,7 +37,7 @@ var retweet = function () {
 // grab & retweet as soon as program is running...
 retweet();
 // retweet in every 50 minutes
-setInterval(retweet, 3000000);
+setInterval(retweet, 3000);
 
     //setInterval(retweet, 180000)
 //     var favoriteTweet = function() {
